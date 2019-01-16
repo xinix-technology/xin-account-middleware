@@ -1,0 +1,29 @@
+{
+  "name": "xin-account-middleware",
+  "version": "1.0.0",
+  "description": "Xin account middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xinix-technology/xin-account-middleware.git"
+  },
+  "keywords": [
+    "xin",
+    "account",
+    "middleware"
+  ],
+  "author": "Ganesha <reekoheek@gmail.com> (http://sagara.id)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xinix-technology/xin-account-middleware/issues"
+  },
+  "homepage": "https://github.com/xinix-technology/xin-account-middleware#readme",
+  "dependencies": {
+    "@xinix/xin": "^2.6.4",
+    "jsonwebtoken": "^8.4.0",
+    "qs": "^6.6.0"
+  }
+}
