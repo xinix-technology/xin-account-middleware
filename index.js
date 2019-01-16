@@ -34,9 +34,13 @@ class XinAccountMiddleware extends Middleware {
       if (hash.startsWith('#access_token=')) {
         try {
           let authData = qs.parse(hash.substr(1));
-          let state = JSON.parse(atob(authData.state));
           this.save(authData.access_token);
-          this.location.replace(`#!${state.uri}`);
+          try {
+            let state = JSON.parse(atob(authData.state));
+            this.location.replace(`#!${state.uri}`);
+          } catch (err) {
+            this.location.replace(`#!/`);
+          }
           await sleep(300);
           return;
         } catch (err) {
